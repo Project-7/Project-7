@@ -9,7 +9,6 @@
  * @author MarkusH
  */
 public class Person {
-    
-    String name;
+ 
     
 }
