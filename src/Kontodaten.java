@@ -10,7 +10,7 @@
  */
 public class Kontodaten {
     
-    private int kontoID = MitgliederID;
+    private int kontoID;
     private String kreditinstitut;
     private int kontonr;
     private char iban;

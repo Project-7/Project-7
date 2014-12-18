@@ -10,7 +10,7 @@
  */
 public class Studiuminfo {
     
-    private int studID = MitgliederID;
+    private int studID;
     private int anfangssemester;
     private String studiengang;
 

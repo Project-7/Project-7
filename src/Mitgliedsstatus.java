@@ -10,7 +10,7 @@
  */
 public class Mitgliedsstatus {
     
-    private int statusID = MitgliederID;
+    private int statusID;
     private String mitglied_seit;
     private String austrittsdatum;
     private String mitgliedsstatus;

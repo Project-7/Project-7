@@ -10,7 +10,7 @@
  */
 public class Geburtsdaten {
     
-    private int geburtsID = MitgliederID;
+    private int geburtsID;
     private String geburtsdatum;
     private String geburtsort;
 
