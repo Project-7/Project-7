@@ -9,20 +9,20 @@
  */
 public class Team {
 
-    private String Team;
+    private String team;
 
     public Team() {
     }
 
-    public Team(String Team) {
-        this.Team = Team;
+    public Team(String team) {
+        this.team = team;
     }
 
     public String getTeam() {
-        return Team;
+        return team;
     }
 
-    public void setTeam(String Team) {
-        this.Team = Team;
+    public void setTeam(String team) {
+        this.team = team;
     }
 }
