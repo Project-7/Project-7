@@ -104,5 +104,20 @@ public class Mitglied extends Person{
         this.Position = Position;
     }
 
+    public Mitglied(int mitgliederID, boolean angemeldet, String studiumGenerale, String email_eRacing, String fuererschein, String vermerk, boolean werkstattregeln, boolean serverzugang, String staatsangehoerigkeit, boolean foto_vorhanden, String Position, String vorname, String nachname, String telefonnr, String email, String strasseHsnr, int plz, String ort) {
+        super(vorname, nachname, telefonnr, email, strasseHsnr, plz, ort);
+        this.mitgliederID = mitgliederID;
+        this.angemeldet = angemeldet;
+        this.studiumGenerale = studiumGenerale;
+        this.email_eRacing = email_eRacing;
+        this.fuererschein = fuererschein;
+        this.vermerk = vermerk;
+        this.werkstattregeln = werkstattregeln;
+        this.serverzugang = serverzugang;
+        this.staatsangehoerigkeit = staatsangehoerigkeit;
+        this.foto_vorhanden = foto_vorhanden;
+        this.Position = Position;
+    }
+
     
 }
