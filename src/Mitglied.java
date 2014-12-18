@@ -7,7 +7,18 @@
  *
  * @author Kalya
  */
-public class Mitglied {
+public class Mitglied extends Person{
+    int mitgliederID;
+    boolean angemeldet;
+    String studiumGenerale;
+    String email_eRacing;
+    String fuererschein;
+    String vermerk;
+    boolean werkstattregeln;
+    boolean serverzugang;
+    String staatsangehoerigkeit;
+    boolean foto_vorhanden;
+    String Position;
+
     
-            
 }
