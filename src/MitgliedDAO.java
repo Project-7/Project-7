@@ -12,7 +12,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author MarkusH / RobertK
+ * @author Project 7
  */
 public class MitgliedDAO {
     
