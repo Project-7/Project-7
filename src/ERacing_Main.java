@@ -26,7 +26,7 @@ public class ERacing_Main {
         
         dao.setNewMitglied(m);
         
-        Connection con = null;
+        /*Connection con = null;
         ResultSet rs;
         Statement stmt;
         try {
@@ -56,7 +56,7 @@ public class ERacing_Main {
         } catch (Exception e) {
             System.err.println(e.getMessage());
 
-        }
+        }*/
 
     }
 }
