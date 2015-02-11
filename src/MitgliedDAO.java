@@ -31,7 +31,7 @@ public class MitgliedDAO {
                 System.out.println("Verbindung mit Datenbank wird hergestellt.");
                 Class.forName("com.mysql.jdbc.Driver");
                 System.out.println("Verbindung ist hergestellt.");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LAeRacing", "root", "");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LAeRacing", "root", "0000");
             } catch (Exception e) {
                 System.err.println("Treiber konnte nicht gefunden werden.");
                 System.err.println(e.getMessage());
@@ -39,10 +39,9 @@ public class MitgliedDAO {
         
             
             try {
-
-                
-                pstmt = con.prepareStatement(insert);
                 eingabe = sc.nextLine();
+                while(eingabe != "exit") {
+                pstmt = con.prepareStatement(insert);
                 pstmt.setBoolean(1, Boolean.parseBoolean(eingabe));
                 pstmt.setString(2, eingabe);
                 pstmt.setString(3, eingabe);
@@ -59,14 +58,14 @@ public class MitgliedDAO {
                 pstmt.setString(14, eingabe);
                 pstmt.setString(15, eingabe);
                 pstmt.setInt(16, Integer.parseInt(eingabe));
-                pstmt.setString(17, eingabe);
+                pstmt.setString(17, eingabe); 
 
                 if (pstmt.executeUpdate() != 0) {
                     System.out.println("Eine neue Bestellung wurde angelegt.");
                 } else {
                     System.out.println("Es wurde keine Bestellung angelegt.");
                 }
-
+                }
             } catch (Exception e) {
                 System.err.println(e.getMessage());
 
