@@ -12,12 +12,8 @@ import java.sql.Statement;
 
 /**
  *
-<<<<<<< HEAD
- * @author MarkusH / RobertKalya
-=======
- * @author Project 7
->>>>>>> 0dea2d0e64d4b4e51f72925b3d35d277b3159f8b
- */
+ * @author MarkusH / RobertK
+**/
 public class MitgliedDAO {
     
     public void setNewMitglied(Mitglied m){
