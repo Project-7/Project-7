@@ -113,6 +113,10 @@ public class Mitglied extends Person{
         this.Position = Position;
     }
 
+    public Mitglied(){
+           //default constr
+    }
+    
     public Mitglied(int mitgliederID, boolean angemeldet, String studiumGenerale, String email_eRacing, String fuererschein, String vermerk, boolean werkstattregeln, boolean serverzugang, String staatsangehoerigkeit, boolean foto_vorhanden, String Position, String vorname, String nachname, String telefonnr, String email, String strasseHsnr, int plz, String ort) {
         super(vorname, nachname, telefonnr, email, strasseHsnr, plz, ort);
         this.mitgliederID = mitgliederID;

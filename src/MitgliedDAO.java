@@ -9,22 +9,16 @@ import java.sql.Statement;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author MarkusH
  */
-public class ERacing_Main {
-
-    /**
-     *
-     */
-    public static void main(String[] args) {
-        
-        // test mitglied anlegen
-        Mitglied m = new Mitglied();
-        MitgliedDAO dao = new MitgliedDAO();
-        
-        dao.setNewMitglied(m);
+public class MitgliedDAO {
+    
+    public void setNewMitglied(Mitglied m){
+    
+        //TODO: zu insert umbaun!!
         
         Connection con = null;
         ResultSet rs;
@@ -41,7 +35,7 @@ public class ERacing_Main {
             System.out.println("Verbindung ist hergestellt.");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LAeRacing", "root", "");
             stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT * FROM Mitglied");
+            rs = stmt.executeQuery("INSERT "); //INSERT machen
 
             while (rs.next()) {
                 try {
@@ -57,6 +51,7 @@ public class ERacing_Main {
             System.err.println(e.getMessage());
 
         }
-
-    }
+        
+    } 
+    
 }
