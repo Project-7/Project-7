@@ -11,7 +11,7 @@
 public abstract class Person {
     
     private String vorname;
-    private String nachname;
+    private String name;
     private String telefonnr;
     private String email;
     private String strasseHsnr;
@@ -21,9 +21,9 @@ public abstract class Person {
     public Person() {
     }
 
-    public Person(String vorname, String nachname, String telefonnr, String email, String strasseHsnr, int plz, String ort) {
+    public Person(String vorname, String name, String telefonnr, String email, String strasseHsnr, int plz, String ort) {
         this.vorname = vorname;
-        this.nachname = nachname;
+        this.name = name;
         this.telefonnr = telefonnr;
         this.email = email;
         this.strasseHsnr = strasseHsnr;
@@ -39,12 +39,12 @@ public abstract class Person {
         this.vorname = vorname;
     }
 
-    public String getNachname() {
-        return nachname;
+    public String getName() {
+        return name;
     }
 
-    public void setNachname(String nachname) {
-        this.nachname = nachname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getTelefonnr() {

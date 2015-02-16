@@ -24,7 +24,7 @@ public class ERacing_Main {
         Mitglied m = new Mitglied();
         MitgliedDAO dao = new MitgliedDAO();
         
-        dao.setNewMitglied(m);
+        dao.setNewMitglied("Max", "Mustermann", "3432423423", "max@holl", "PassauerStr. 4", 45454, "NähePassau", 1, "nicht dass ich wüsste", "andy@eracing", "LKW, Fahrrad", "ka", 0, 0, "Bayerisch/Deutsch", 1, "Vorstand");
         
         /*Connection con = null;
         ResultSet rs;
