@@ -1,8 +1,4 @@
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,6 +13,7 @@ public class ERacing_Main {
 
     /**
      *
+     * @author MarkusH, RobertK
      */
     public static void main(String[] args) {
         
@@ -24,7 +21,7 @@ public class ERacing_Main {
         Mitglied m = new Mitglied();
         MitgliedDAO dao = new MitgliedDAO();
         
-        dao.setNewMitglied("Max", "Mustermann", "3432423423", "max@holl", "PassauerStr. 4", 45454, "NähePassau", 1, "nicht dass ich wüsste", "andy@eracing", "LKW, Fahrrad", "ka", 0, 0, "Bayerisch/Deutsch", 1, "Vorstand");
+        dao.writeNewMitgliedInDatabase("Max", "Mustermann", "3432423423", "max@holl", "PassauerStr. 4", 45454, "NähePassau", 1, "nicht dass ich wüsste", "andy@eracing", "LKW, Fahrrad", "ka", 0, 0, "Bayerisch/Deutsch", 1, "Vorstand");
         
         /*Connection con = null;
         ResultSet rs;
