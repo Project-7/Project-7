@@ -19,14 +19,7 @@ public class ERacing_Main {
      *
      */
     public static void main(String[] args) {
-        
-        // test mitglied anlegen
-        Mitglied m = new Mitglied();
-        MitgliedDAO dao = new MitgliedDAO();
-        
-        dao.setNewMitglied("Max", "Mustermann", "3432423423", "max@holl", "PassauerStr. 4", 45454, "NähePassau", 1, "nicht dass ich wüsste", "andy@eracing", "LKW, Fahrrad", "ka", 0, 0, "Bayerisch/Deutsch", 1, "Vorstand");
-        
-        /*Connection con = null;
+        Connection con = null;
         ResultSet rs;
         Statement stmt;
         try {
@@ -56,7 +49,7 @@ public class ERacing_Main {
         } catch (Exception e) {
             System.err.println(e.getMessage());
 
-        }*/
+        }
 
     }
 }

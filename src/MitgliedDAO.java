@@ -19,7 +19,7 @@ import java.util.Scanner;
  */
 public class MitgliedDAO {
 
-    public void setNewMitglied(String vorname, String name, String telefonnr, String email, String strasseHsnr, int plz, String ort, int angemeldet, String studiumGenerale, String email_eRacing, String fuehrerschein, String vermerk, int werkstattregeln, int serverzugang, String staatsangehoerigkeit, int foto_vorhanden, String Position){
+    public void writeNewMitgliedInDatabase(String vorname, String name, String telefonnr, String email, String strasseHsnr, int plz, String ort, int angemeldet, String studiumGenerale, String email_eRacing, String fuehrerschein, String vermerk, int werkstattregeln, int serverzugang, String staatsangehoerigkeit, int foto_vorhanden, String Position){
     
         Connection con = null;
         try {
