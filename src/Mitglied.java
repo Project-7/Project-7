@@ -17,15 +17,15 @@ import java.util.Scanner;
 public class Mitglied extends Person{
     
     private int mitgliederID;
-    private int angemeldet;
+    private boolean angemeldet;
     private String studiumGenerale;
     private String email_eRacing;
     private String fuererschein;
     private String vermerk;
-    private int werkstattregeln;
-    private int serverzugang;
+    private boolean werkstattregeln;
+    private boolean serverzugang;
     private String staatsangehoerigkeit;
-    private int foto_vorhanden;
+    private boolean foto_vorhanden;
     private String Position;
     //private Object con = ERacing_Main.verbindungsaufbau();
 
@@ -33,7 +33,7 @@ public class Mitglied extends Person{
         return mitgliederID;
     }
 
-    public int isAngemeldet() {
+    public boolean isAngemeldet() {
         return angemeldet;
     }
 
@@ -53,11 +53,11 @@ public class Mitglied extends Person{
         return vermerk;
     }
 
-    public int isWerkstattregeln() {
+    public boolean isWerkstattregeln() {
         return werkstattregeln;
     }
 
-    public int isServerzugang() {
+    public boolean isServerzugang() {
         return serverzugang;
     }
 
@@ -65,7 +65,7 @@ public class Mitglied extends Person{
         return staatsangehoerigkeit;
     }
 
-    public int isFoto_vorhanden() {
+    public boolean isFoto_vorhanden() {
         return foto_vorhanden;
     }
 
@@ -73,7 +73,7 @@ public class Mitglied extends Person{
         return Position;
     }
 
-    public void setAngemeldet(int angemeldet) {
+    public void setAngemeldet(boolean angemeldet) {
         this.angemeldet = angemeldet;
     }
 
@@ -93,11 +93,11 @@ public class Mitglied extends Person{
         this.vermerk = vermerk;
     }
 
-    public void setWerkstattregeln(int werkstattregeln) {
+    public void setWerkstattregeln(boolean werkstattregeln) {
         this.werkstattregeln = werkstattregeln;
     }
 
-    public void setServerzugang(int serverzugang) {
+    public void setServerzugang(boolean serverzugang) {
         this.serverzugang = serverzugang;
     }
 
@@ -105,7 +105,7 @@ public class Mitglied extends Person{
         this.staatsangehoerigkeit = staatsangehoerigkeit;
     }
 
-    public void setFoto_vorhanden(int foto_vorhanden) {
+    public void setFoto_vorhanden(boolean foto_vorhanden) {
         this.foto_vorhanden = foto_vorhanden;
     }
 
@@ -113,12 +113,8 @@ public class Mitglied extends Person{
         this.Position = Position;
     }
 
-    public Mitglied(){
-           //default constr
-    }
-    
-    public Mitglied(int mitgliederID, String vorname, String name, String telefonnr, String email, String strasseHsnr, int plz, String ort,int angemeldet, String studiumGenerale, String email_eRacing, String fuererschein, String vermerk, int werkstattregeln, int serverzugang, String staatsangehoerigkeit, int foto_vorhanden, String Position) {
-        super(vorname, name, telefonnr, email, strasseHsnr, plz, ort);
+    public Mitglied(int mitgliederID, boolean angemeldet, String studiumGenerale, String email_eRacing, String fuererschein, String vermerk, boolean werkstattregeln, boolean serverzugang, String staatsangehoerigkeit, boolean foto_vorhanden, String Position, String vorname, String nachname, String telefonnr, String email, String strasseHsnr, int plz, String ort) {
+        super(vorname, nachname, telefonnr, email, strasseHsnr, plz, ort);
         this.mitgliederID = mitgliederID;
         this.angemeldet = angemeldet;
         this.studiumGenerale = studiumGenerale;
@@ -130,5 +126,52 @@ public class Mitglied extends Person{
         this.staatsangehoerigkeit = staatsangehoerigkeit;
         this.foto_vorhanden = foto_vorhanden;
         this.Position = Position;
-    } 
+    }
+    
+    /*public void datenAusgeben(){
+    
+        
+    }
+    
+    
+    public void neuesMitglied(){
+    
+       
+        int id=4;
+        String vorname = "";
+        String nachname = "";
+        /*String vorname = "";
+        String vorname = "";
+        String vorname = "";
+        String vorname = "";
+        String vorname = "";
+        String vorname = "";
+        
+        
+        while (true) {
+
+            System.out.println("Bitte Mitgliedsdaten eingeben. Wenn Sie mit Ihrer Abfrage fertig sind, verlassen Sie das Programm mit exit");
+            System.out.println("Vorname");
+            Scanner sc = new Scanner(System.in);
+            vorname = sc.nextLine();
+            System.out.println("Nachname");
+            nachname = sc.nextLine();
+
+            if (!sc.equals("exit")) {
+                PreparedStatement pstmt = con.prepareStatement("INSERT INTO Mitglied VALUES (?,?)");
+                pstmt.setInt(1, );
+                pstmt.setString(2, setVorname(mitglied));
+                ResultSet rs = pstmt.executeQuery();
+                id++;
+                while (rs.next()) {
+                    
+                }
+               
+            } else 
+                return;
+        }
+    
+    }*/
+
+    
 }
