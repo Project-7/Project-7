@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -18,9 +19,25 @@ import java.util.Scanner;
  */
 public class MitgliedDAO {
 
-    public void setNewMitglied(Mitglied m) {
+    public void setNewMitglied(String vorname, String name, String telefonnr, String email, String strasseHsnr, int plz, String ort, int angemeldet, String studiumGenerale, String email_eRacing, String fuehrerschein, String vermerk, int werkstattregeln, int serverzugang, String staatsangehoerigkeit, int foto_vorhanden, String Position){
+    
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LAeRacing", "root", "0000");
+            Statement stmt = con.createStatement();
+            stmt.executeUpdate("INSERT INTO Mitglied VALUES (mitgliederID, '"+vorname+"', '"+name+"', '"+telefonnr+"', '"+email+"', '"+strasseHsnr+"', '"+plz+"', '"+ort+"', '"+angemeldet+"', '"+studiumGenerale+"', '"+email_eRacing+"', '"+fuehrerschein+"', '"+vermerk+"', '"+werkstattregeln+"', '"+serverzugang+"', '"+staatsangehoerigkeit+"', '"+foto_vorhanden+"', '"+Position+"')");
+            System.out.println("Datensatz erfolgreich angelegt.");
+        } catch (SQLException e) {
+            System.err.println("Fehler: "+e);
+        }
+        
+        
+    }
+        
+        
+        
 
-        //TODO: zu insert umbaun!!
+        /*//TODO: zu insert umbaun!!
         Scanner sc = new Scanner(System.in);
         Connection con = null;
         ResultSet rs;
@@ -39,7 +56,7 @@ public class MitgliedDAO {
         
             
             try {
-                System.out.println("Neus Mitglied anlegen:");
+                System.out.println("Neues Mitglied anlegen:");
                 pstmt = con.prepareStatement(insert);
                 System.out.println("Vorname");
                 eingabe = sc.nextLine();
@@ -94,7 +111,7 @@ public class MitgliedDAO {
                 pstmt.setString(17, eingabe); 
                 
                 
-                if (pstmt.executeUpdate() != 0) {
+                if (pstmt.executeUpdate(insert) != 0) {
                     System.out.println("Eine neue Bestellung wurde angelegt.");
                 } else {
                     System.out.println("Es wurde keine Bestellung angelegt.");
@@ -150,5 +167,4 @@ public class MitgliedDAO {
      }
     
      }*/
-
-}
+    }

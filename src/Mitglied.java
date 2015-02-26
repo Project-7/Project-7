@@ -17,15 +17,15 @@ import java.util.Scanner;
 public class Mitglied extends Person{
     
     private int mitgliederID;
-    private boolean angemeldet;
+    private int angemeldet;
     private String studiumGenerale;
     private String email_eRacing;
     private String fuererschein;
     private String vermerk;
-    private boolean werkstattregeln;
-    private boolean serverzugang;
+    private int werkstattregeln;
+    private int serverzugang;
     private String staatsangehoerigkeit;
-    private boolean foto_vorhanden;
+    private int foto_vorhanden;
     private String Position;
     //private Object con = ERacing_Main.verbindungsaufbau();
 
@@ -33,7 +33,7 @@ public class Mitglied extends Person{
         return mitgliederID;
     }
 
-    public boolean isAngemeldet() {
+    public int isAngemeldet() {
         return angemeldet;
     }
 
@@ -53,11 +53,11 @@ public class Mitglied extends Person{
         return vermerk;
     }
 
-    public boolean isWerkstattregeln() {
+    public int isWerkstattregeln() {
         return werkstattregeln;
     }
 
-    public boolean isServerzugang() {
+    public int isServerzugang() {
         return serverzugang;
     }
 
@@ -65,7 +65,7 @@ public class Mitglied extends Person{
         return staatsangehoerigkeit;
     }
 
-    public boolean isFoto_vorhanden() {
+    public int isFoto_vorhanden() {
         return foto_vorhanden;
     }
 
@@ -73,7 +73,7 @@ public class Mitglied extends Person{
         return Position;
     }
 
-    public void setAngemeldet(boolean angemeldet) {
+    public void setAngemeldet(int angemeldet) {
         this.angemeldet = angemeldet;
     }
 
@@ -93,11 +93,11 @@ public class Mitglied extends Person{
         this.vermerk = vermerk;
     }
 
-    public void setWerkstattregeln(boolean werkstattregeln) {
+    public void setWerkstattregeln(int werkstattregeln) {
         this.werkstattregeln = werkstattregeln;
     }
 
-    public void setServerzugang(boolean serverzugang) {
+    public void setServerzugang(int serverzugang) {
         this.serverzugang = serverzugang;
     }
 
@@ -105,7 +105,7 @@ public class Mitglied extends Person{
         this.staatsangehoerigkeit = staatsangehoerigkeit;
     }
 
-    public void setFoto_vorhanden(boolean foto_vorhanden) {
+    public void setFoto_vorhanden(int foto_vorhanden) {
         this.foto_vorhanden = foto_vorhanden;
     }
 
@@ -117,8 +117,8 @@ public class Mitglied extends Person{
            //default constr
     }
     
-    public Mitglied(int mitgliederID, String vorname, String nachname, String telefonnr, String email, String strasseHsnr, int plz, String ort, boolean angemeldet, String studiumGenerale, String email_eRacing, String fuererschein, String vermerk, boolean werkstattregeln, boolean serverzugang, String staatsangehoerigkeit, boolean foto_vorhanden, String Position) {
-        super(vorname, nachname, telefonnr, email, strasseHsnr, plz, ort);
+    public Mitglied(int mitgliederID, String vorname, String name, String telefonnr, String email, String strasseHsnr, int plz, String ort,int angemeldet, String studiumGenerale, String email_eRacing, String fuererschein, String vermerk, int werkstattregeln, int serverzugang, String staatsangehoerigkeit, int foto_vorhanden, String Position) {
+        super(vorname, name, telefonnr, email, strasseHsnr, plz, ort);
         this.mitgliederID = mitgliederID;
         this.angemeldet = angemeldet;
         this.studiumGenerale = studiumGenerale;
