@@ -20,7 +20,7 @@ public class MitgliedDAO {
 
         Connection con = null;
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LAeRacing", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LAeRacing", "root", "0000");
             Statement stmt = con.createStatement();
             stmt.executeUpdate("INSERT INTO Mitglied VALUES (mitgliederID, '" + vorname + "', '" + name + "', '" + telefonnr + "', '" + email + "', '" + strasseHsnr + "', '" + plz + "', '" + ort + "', '" + angemeldet + "', '" + studiumGenerale + "', '" + email_eRacing + "', '" + fuehrerschein + "', '" + vermerk + "', '" + werkstattregeln + "', '" + serverzugang + "', '" + staatsangehoerigkeit + "', '" + foto_vorhanden + "', '" + Position + "')");
             System.out.println("Datensatz erfolgreich angelegt.");
