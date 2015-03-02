@@ -9,7 +9,7 @@
  * @author MarkusH
  */
 public abstract class Person {
-    
+
     private String vorname;
     private String nachname;
     private String telefonnr;
@@ -86,11 +86,5 @@ public abstract class Person {
     public void setOrt(String ort) {
         this.ort = ort;
     }
-    
-    
-    
-    
-    
-    
-    
+
 }

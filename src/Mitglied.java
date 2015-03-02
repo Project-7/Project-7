@@ -1,21 +1,15 @@
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Scanner;
 
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Kalya
  */
-public class Mitglied extends Person{
-    
+public class Mitglied extends Person {
+
     private int mitgliederID;
     private boolean angemeldet;
     private String studiumGenerale;
@@ -27,7 +21,7 @@ public class Mitglied extends Person{
     private String staatsangehoerigkeit;
     private boolean foto_vorhanden;
     private String Position;
-    //private Object con = ERacing_Main.verbindungsaufbau();
+    
 
     public int getMitgliederID() {
         return mitgliederID;
@@ -127,51 +121,5 @@ public class Mitglied extends Person{
         this.foto_vorhanden = foto_vorhanden;
         this.Position = Position;
     }
-    
-    /*public void datenAusgeben(){
-    
-        
-    }
-    
-    
-    public void neuesMitglied(){
-    
-       
-        int id=4;
-        String vorname = "";
-        String nachname = "";
-        /*String vorname = "";
-        String vorname = "";
-        String vorname = "";
-        String vorname = "";
-        String vorname = "";
-        String vorname = "";
-        
-        
-        while (true) {
 
-            System.out.println("Bitte Mitgliedsdaten eingeben. Wenn Sie mit Ihrer Abfrage fertig sind, verlassen Sie das Programm mit exit");
-            System.out.println("Vorname");
-            Scanner sc = new Scanner(System.in);
-            vorname = sc.nextLine();
-            System.out.println("Nachname");
-            nachname = sc.nextLine();
-
-            if (!sc.equals("exit")) {
-                PreparedStatement pstmt = con.prepareStatement("INSERT INTO Mitglied VALUES (?,?)");
-                pstmt.setInt(1, );
-                pstmt.setString(2, setVorname(mitglied));
-                ResultSet rs = pstmt.executeQuery();
-                id++;
-                while (rs.next()) {
-                    
-                }
-               
-            } else 
-                return;
-        }
-    
-    }*/
-
-    
 }
